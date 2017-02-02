@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+[Route("customer")]
 public class CustomerCareController : Controller
 {
  public IActionResult Index()
@@ -6,8 +7,9 @@ public class CustomerCareController : Controller
  return Ok("This is the index of the CustomerCareController");
  }
  
- public IActionResult Quote()
+ public IActionResult Claims()
  {
- return Ok("This is the Quote of the CustomerCareController");
+ return Ok("This is the Claim of the CustomerCareController");
  }
+ 
 }
