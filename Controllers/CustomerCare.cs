@@ -12,10 +12,10 @@ public class CustomerCareController : Controller
  {
  return Ok("This is the Claim of the CustomerCareController");
  }
- [Route("claimstatus")]
+ [Route("myclaims")]
  public IActionResult ClaimHistory()
  {
- return Ok("This is the Claim History of the CustomerCareController");
+ return Ok("This is the My Claims method of the CustomerCareController");
  }
  
 }
