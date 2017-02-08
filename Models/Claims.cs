@@ -1,6 +1,6 @@
-Using System;
+using System;
 
-namespace FisherInsurance.Models;
+namespace FisherInsurance.Models
 {
 
     public class Claims{
