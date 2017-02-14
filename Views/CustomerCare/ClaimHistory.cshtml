@@ -1,0 +1,25 @@
+@model List<Claim>
+
+@{
+    ViewData["Title"] = "Claims - Status";
+}
+
+<h4>Claim Status</h4>
+<br/>
+<table class="table table-bordered">
+    <tr>
+        <td>Policy Number</td>
+        <td>Loss Date</td>
+        <td>Loss Amount</td>
+        <td>Status</td>
+    </tr>
+    @foreach (var claim in Model)
+    {
+        <tr>
+            <td>@claim.PolicyNumber</td>
+            <td>@claim.LossDate</td>
+            <td>@claim.LossAmount</td>
+            <td>@claim.Status</td>
+        </tr>
+    }
+</table>

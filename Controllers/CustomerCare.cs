@@ -1,21 +1,33 @@
+using System;
+using System.Collections.Generic;
+using FisherInsurance.Models;
 using Microsoft.AspNetCore.Mvc;
-
-[Route("customer")]
+ 
+[Route("claim")]
 public class CustomerCareController : Controller
 {
- public IActionResult Index()
- {
- return Ok("This is the index of the CustomerCareController");
- }
- [Route("fileclaim")]
- public IActionResult NewClaim()
- {
- return Ok("This is the Claim of the CustomerCareController");
- }
- [Route("myclaims")]
- public IActionResult ClaimHistory()
- {
- return Ok("This is the My Claims method of the CustomerCareController");
- }
- 
+    [RouteAttribute("")]
+    [RouteAttribute("index")]
+    public IActionResult Index()
+    {
+        return View();
+    }
+
+    [Route("fileclaim")]
+    public IActionResult NewClaim()
+    {
+        return View();
+    }
+    
+    [Route("myclaims")]
+    public IActionResult ClaimHistory()
+    {
+       // List<Claim> claims = new List<Claim>();
+        //claims.Add(new Claim{Id=1, PolicyNumber= "RTY777790", LossDate=DateTime.Now.AddDays(-16), LossAmount = 4200M, Status="Open"});
+        //claims.Add(new Claim{Id=1, PolicyNumber= "RTY575870", LossDate=DateTime.Now.AddDays(-250), LossAmount = 10000M, Status="Closed"});
+        //claims.Add(new Claim{Id=1, PolicyNumber= "RTY575870", LossDate=DateTime.Now.AddDays(-250), LossAmount = 4200M, Status="Denied"});
+        //claims.Add(new Claim{Id=1, PolicyNumber= "RTY123790", LossDate=DateTime.Now.AddDays(-1000), LossAmount = 5000M, Status="Closed"});
+        
+        return View();
+    }
 }
